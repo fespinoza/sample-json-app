@@ -1,0 +1,32 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Hello, world!" : {
+      "comment" : "The start of everything",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hola mundo!"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hei Verden!"
+          }
+        }
+      }
+    },
+    "Hello, World!" : {
+
+    },
+    "Test Case" : {
+
+    },
+    "Trending Movies" : {
+
+    }
+  },
+  "version" : "1.0"
+}
