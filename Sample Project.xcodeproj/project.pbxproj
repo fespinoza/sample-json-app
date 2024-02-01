@@ -34,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		9B5C6BD62B6A401F00D3AEE1 /* Secrets_SAMPLE.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets_SAMPLE.xcconfig; sourceTree = "<group>"; };
+		9B5C6BD82B6C1F0600D3AEE1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9B9EDDDA2B6A3E2200930BCB /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		9B9EDDDB2B6A3EAB00930BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BBB7CBF2B653E4800393882 /* Sample Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +83,7 @@
 		9BBB7CB62B653E4700393882 = {
 			isa = PBXGroup;
 			children = (
+				9B5C6BD82B6C1F0600D3AEE1 /* README.md */,
 				9BBB7CC12B653E4800393882 /* Sample Project */,
 				9BD958882B66E0380073C8E7 /* Sample ProjectTests */,
 				9BBB7CC02B653E4800393882 /* Products */,
