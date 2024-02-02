@@ -74,17 +74,22 @@ struct Client {
 
 struct Movie: Decodable, Identifiable {
     let title: String
-    let ids: MovieIDContainer
+    let ids: IDContainer
     let year: Int
     let poster: String
     let runtime: Int
     let overview: String
     let genres: [String]
     let director: String
-    let raitings: Raiting
+    let ratings: Rating
     let trailers: [Trailer]
 
-    var id: MovieID { ids.simklID }
+    struct IDContainer: Decodable {
+        let simkl: MovieID
+        let slug: String
+    }
+
+    var id: MovieID { ids.simkl }
 
     var imageURL: URL {
         BackendConstants
@@ -101,7 +106,7 @@ struct Movie: Decodable, Identifiable {
             )
     }
 
-    struct Raiting: Decodable {
+    struct Rating: Decodable {
         let simkl: SimklRating
 
         struct SimklRating: Decodable {
