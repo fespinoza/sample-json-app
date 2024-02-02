@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9B5C6BD72B6A401F00D3AEE1 /* Secrets_SAMPLE.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C6BD62B6A401F00D3AEE1 /* Secrets_SAMPLE.xcconfig */; };
+		9B5C6BDB2B6C1F3800D3AEE1 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6BDA2B6C1F3800D3AEE1 /* MovieCell.swift */; };
+		9B5C6BDD2B6C3B9000D3AEE1 /* MovieParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6BDC2B6C3B9000D3AEE1 /* MovieParser.swift */; };
+		9B5C6BE02B6C40EF00D3AEE1 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C6BDF2B6C40EF00D3AEE1 /* MovieDetailsView.swift */; };
 		9BBB7CC32B653E4800393882 /* SampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB7CC22B653E4800393882 /* SampleProjectApp.swift */; };
 		9BBB7CC52B653E4800393882 /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB7CC42B653E4800393882 /* HelloWorldView.swift */; };
 		9BBB7CC72B653E4900393882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB7CC62B653E4900393882 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		9B5C6BD62B6A401F00D3AEE1 /* Secrets_SAMPLE.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets_SAMPLE.xcconfig; sourceTree = "<group>"; };
 		9B5C6BD82B6C1F0600D3AEE1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9B5C6BDA2B6C1F3800D3AEE1 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		9B5C6BDC2B6C3B9000D3AEE1 /* MovieParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieParser.swift; sourceTree = "<group>"; };
+		9B5C6BDF2B6C40EF00D3AEE1 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		9B9EDDDA2B6A3E2200930BCB /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		9B9EDDDB2B6A3EAB00930BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BBB7CBF2B653E4800393882 /* Sample Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B5C6BDE2B6C40E200D3AEE1 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C6BDF2B6C40EF00D3AEE1 /* MovieDetailsView.swift */,
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
 		9B9EDDD92B6A3E0F00930BCB /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				9BCB7DFD2B6999A400D73894 /* TrendingMovieList.swift */,
+				9B5C6BDA2B6C1F3800D3AEE1 /* MovieCell.swift */,
+				9B5C6BDC2B6C3B9000D3AEE1 /* MovieParser.swift */,
 			);
 			path = TrendingMovies;
 			sourceTree = "<group>";
@@ -138,6 +154,7 @@
 		9BD958962B66E0B40073C8E7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9B5C6BDE2B6C40E200D3AEE1 /* MovieDetails */,
 				9BCB7DFC2B69999200D73894 /* TrendingMovies */,
 				9BD9589F2B66E2C00073C8E7 /* Example */,
 				9BD958972B66E0BA0073C8E7 /* HelloWorld */,
@@ -304,12 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5C6BDB2B6C1F3800D3AEE1 /* MovieCell.swift in Sources */,
 				9BCB7DFB2B69969400D73894 /* Constants.swift in Sources */,
 				9BBB7CC52B653E4800393882 /* HelloWorldView.swift in Sources */,
 				9BD958A42B66E59E0073C8E7 /* SampleCustomAsyncImage.swift in Sources */,
+				9B5C6BDD2B6C3B9000D3AEE1 /* MovieParser.swift in Sources */,
 				9BCB7DFE2B6999A400D73894 /* TrendingMovieList.swift in Sources */,
 				9BD958A22B66E2D00073C8E7 /* SampleRemoteImage.swift in Sources */,
 				9BBB7CC32B653E4800393882 /* SampleProjectApp.swift in Sources */,
+				9B5C6BE02B6C40EF00D3AEE1 /* MovieDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
