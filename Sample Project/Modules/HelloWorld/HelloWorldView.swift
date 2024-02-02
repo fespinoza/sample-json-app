@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Sample Project
-//
-//  Created by Felipe Espinoza on 27/01/2024.
-//
-
 import SwiftUI
 
 struct HelloWorldView: View {

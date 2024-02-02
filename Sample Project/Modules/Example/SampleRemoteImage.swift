@@ -1,10 +1,3 @@
-//
-//  SampleRemoteImage.swift
-//  Sample Project
-//
-//  Created by Felipe Espinoza on 28/01/2024.
-//
-
 import SwiftUI
 
 struct SampleRemoteImage: View {
