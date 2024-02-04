@@ -32,6 +32,7 @@ struct MovieDetailsContainerView: View {
         .task {
             await fetchMovie()
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     private func movieViewData(from movie: Movie) -> MovieViewData {

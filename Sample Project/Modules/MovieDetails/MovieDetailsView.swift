@@ -57,7 +57,6 @@ struct MovieDetailsView: View {
             .padding(.horizontal, 16)
         }
         .navigationTitle(viewData.title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
