@@ -1,7 +1,4 @@
 import Foundation
-import Tagged
-
-typealias SimklMovieID = Tagged<TrendingMovie, Int>
 
 struct TrendingMovie: Decodable, Identifiable {
     let ids: IDContainer
