@@ -10,7 +10,7 @@ struct Movie: Decodable, Identifiable {
     let genres: [String]
     let director: String
     let ratings: Rating
-    let trailers: [Trailer]
+    let trailers: [Trailer]?
 
     var id: SimklMovieID { ids.simkl }
     var imageURL: URL { ImageCdnURL.posterURL(for: poster) }
