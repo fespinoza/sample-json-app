@@ -15,17 +15,20 @@ struct TrendingMovieList: View {
                     spacing: 12,
                     content: {
                         ForEach(movies) { movie in
-                            CustomAsyncImage(viewData: .remote(url: movie.imageURL)) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                            NavigationLink(destination: MovieDetailsContainerView(id: movie.id)) {
+
+                                CustomAsyncImage(viewData: .remote(url: movie.imageURL)) { image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                }
+                                .frame(
+                                    width: proxy.size.width / 2.0 - 16,
+                                    height: (proxy.size.width / 2.0 - 16) * 1.5
+                                )
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .shadow(radius: 4)
                             }
-                            .frame(
-                                width: proxy.size.width / 2.0 - 16,
-                                height: (proxy.size.width / 2.0 - 16) * 1.5
-                            )
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                            .shadow(radius: 4)
                         }
                     }
                 )
