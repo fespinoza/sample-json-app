@@ -5,7 +5,7 @@ struct MovieViewData {
     let title: String
     let image: ImageViewData
     let year: String
-    let runtime: String
+    let runtime: String?
     let overview: String
     let genres: [String]
     let rating: String
@@ -31,7 +31,9 @@ struct MovieDetailsView: View {
 
                 HStack {
                     Label(viewData.year, systemImage: "calendar")
-                    Label(viewData.runtime, systemImage: "clock")
+                    if let runtime = viewData.runtime {
+                        Label(runtime, systemImage: "clock")
+                    }
                     Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
                 }
                 .font(.caption)
@@ -58,7 +60,7 @@ extension MovieViewData {
         title: String = "Avatar: The Way of Water",
         image: ImageViewData = .image(.piratesOfTheCaribbean),
         year: String = "2022",
-        runtime: String = "3h 12m",
+        runtime: String? = "3h 12m",
         overview: String = """
         Set more than a decade after the events of the first \
         film, learn the story of the Sully family (Jake, Neytiri, \

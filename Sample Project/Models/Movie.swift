@@ -5,7 +5,7 @@ struct Movie: Decodable, Identifiable {
     let title: String
     let year: Int
     let poster: String
-    let runtime: Int
+    let runtime: Int?
     let overview: String
     let genres: [String]
     let director: String

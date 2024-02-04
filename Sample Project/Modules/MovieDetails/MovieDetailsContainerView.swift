@@ -35,12 +35,18 @@ struct MovieDetailsContainerView: View {
     }
 
     private func movieViewData(from movie: Movie) -> MovieViewData {
-        .init(
+        let runtime: String? = if let runtime = movie.runtime {
+            runtime.formatted() + " min"
+        } else {
+            nil
+        }
+
+        return .init(
             id: movie.id,
             title: movie.title,
             image: .remote(url: movie.imageURL),
             year: "\(movie.year)",
-            runtime: movie.runtime.formatted() + " min", // TODO
+            runtime: runtime,
             overview: movie.overview,
             genres: movie.genres,
             rating: movie.ratings.simkl.rating.formatted(.number.precision(.significantDigits(2)))
