@@ -16,29 +16,38 @@ struct MovieDetailsView: View {
 
     var body: some View {
         ScrollView {
-            VStack {
-                CustomAsyncImage(viewData: viewData.image) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
-                .clipped()
-
-                Text(viewData.title)
-                    .font(.title.bold())
-
-                Label(viewData.rating, systemImage: "star.fill")
-
-                HStack {
-                    Label(viewData.year, systemImage: "calendar")
-                    if let runtime = viewData.runtime {
-                        Label(runtime, systemImage: "clock")
+            VStack(spacing: 32) {
+                MovieDetailPosterView(viewData: viewData.image)
+                    .overlay {
+                        LinearGradient(
+                            stops: [
+                                .init(color: .clear, location: 0.75),
+                                .init(color: Color(uiColor: .systemBackground), location: 1.0),
+                            ],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
                     }
-                    Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
-                }
-                .font(.caption)
+                    .padding(.horizontal, -16)
+                    .overlay(alignment: .bottom) {
+                        VStack(spacing: 8) {
+                            Text(viewData.title)
+                                .font(.title.bold())
 
-                VStack(alignment: .leading) {
+                            Label(viewData.rating, systemImage: "star.fill")
+
+                            HStack {
+                                Label(viewData.year, systemImage: "calendar")
+                                if let runtime = viewData.runtime {
+                                    Label(runtime, systemImage: "clock")
+                                }
+                                Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
+                            }
+                            .font(.caption)
+                        }
+                    }
+
+                VStack(alignment: .leading, spacing: 16) {
                     Text("Overview")
                         .font(.headline)
 
@@ -47,18 +56,22 @@ struct MovieDetailsView: View {
             }
             .padding(.horizontal, 16)
         }
+        .navigationTitle(viewData.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    MovieDetailsView(viewData: .previewValue())
+    NavigationStack {
+        MovieDetailsView(viewData: .previewValue())
+    }
 }
 
 extension MovieViewData {
     static func previewValue(
         id: SimklMovieID = .init((1...100).randomElement() ?? 3),
         title: String = "Avatar: The Way of Water",
-        image: ImageViewData = .image(.piratesOfTheCaribbean),
+        image: ImageViewData = .image(.avatar2),
         year: String = "2022",
         runtime: String? = "3h 12m",
         overview: String = """

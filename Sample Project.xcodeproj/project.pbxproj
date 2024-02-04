@@ -29,6 +29,7 @@
 		9BEBDA112B70177200F618EA /* SimklMovieID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA102B70177200F618EA /* SimklMovieID.swift */; };
 		9BEBDA142B70194900F618EA /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA132B70194900F618EA /* MovieDetailsView.swift */; };
 		9BEBDA162B702A1F00F618EA /* MovieDetailsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA152B702A1F00F618EA /* MovieDetailsContainerView.swift */; };
+		9BEBDA182B702EE800F618EA /* MovieDetailPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA172B702EE800F618EA /* MovieDetailPosterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		9BEBDA102B70177200F618EA /* SimklMovieID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimklMovieID.swift; sourceTree = "<group>"; };
 		9BEBDA132B70194900F618EA /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		9BEBDA152B702A1F00F618EA /* MovieDetailsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsContainerView.swift; sourceTree = "<group>"; };
+		9BEBDA172B702EE800F618EA /* MovieDetailPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPosterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			children = (
 				9BEBDA132B70194900F618EA /* MovieDetailsView.swift */,
 				9BEBDA152B702A1F00F618EA /* MovieDetailsContainerView.swift */,
+				9BEBDA172B702EE800F618EA /* MovieDetailPosterView.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BCB7DFB2B69969400D73894 /* SimklClient.swift in Sources */,
+				9BEBDA182B702EE800F618EA /* MovieDetailPosterView.swift in Sources */,
 				9BEBDA062B70117B00F618EA /* ImageCdnURL.swift in Sources */,
 				9BEBDA0B2B7012B400F618EA /* GetTrendingMoviesWeekRequest.swift in Sources */,
 				9BEBDA112B70177200F618EA /* SimklMovieID.swift in Sources */,
