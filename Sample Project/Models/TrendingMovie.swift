@@ -1,7 +1,7 @@
 import Foundation
 import Tagged
 
-typealias MovieID = Tagged<TrendingMovie, Int>
+typealias SimklMovieID = Tagged<TrendingMovie, Int>
 
 struct TrendingMovie: Decodable, Identifiable {
     let ids: IDContainer
@@ -14,10 +14,10 @@ struct TrendingMovie: Decodable, Identifiable {
     let runtime: String?
     let genres: [String]
 
-    var id: MovieID { ids.simklID }
+    var id: SimklMovieID { ids.simklID }
 
     struct IDContainer: Decodable {
-        let simklID: MovieID
+        let simklID: SimklMovieID
         let slug: String
 
         enum CodingKeys: String, CodingKey {
