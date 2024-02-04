@@ -28,6 +28,7 @@
 		9BEBDA0F2B70175A00F618EA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA0E2B70175A00F618EA /* Movie.swift */; };
 		9BEBDA112B70177200F618EA /* SimklMovieID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA102B70177200F618EA /* SimklMovieID.swift */; };
 		9BEBDA142B70194900F618EA /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA132B70194900F618EA /* MovieDetailsView.swift */; };
+		9BEBDA162B702A1F00F618EA /* MovieDetailsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBDA152B702A1F00F618EA /* MovieDetailsContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9BEBDA0E2B70175A00F618EA /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9BEBDA102B70177200F618EA /* SimklMovieID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimklMovieID.swift; sourceTree = "<group>"; };
 		9BEBDA132B70194900F618EA /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		9BEBDA152B702A1F00F618EA /* MovieDetailsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				9BEBDA132B70194900F618EA /* MovieDetailsView.swift */,
+				9BEBDA152B702A1F00F618EA /* MovieDetailsContainerView.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				9BBB7CC52B653E4800393882 /* HelloWorldView.swift in Sources */,
 				9BD958A42B66E59E0073C8E7 /* SampleCustomAsyncImage.swift in Sources */,
 				9BCB7DFE2B6999A400D73894 /* TrendingMovieList.swift in Sources */,
+				9BEBDA162B702A1F00F618EA /* MovieDetailsContainerView.swift in Sources */,
 				9BD958A22B66E2D00073C8E7 /* SampleRemoteImage.swift in Sources */,
 				9BBB7CC32B653E4800393882 /* SampleProjectApp.swift in Sources */,
 			);
