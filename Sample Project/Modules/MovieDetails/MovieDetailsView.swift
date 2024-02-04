@@ -12,13 +12,44 @@ struct MovieViewData {
 }
 
 struct MovieDetailsView: View {
+    let viewData: MovieViewData
+
     var body: some View {
-        Text("Hello, World!")
+        ScrollView {
+            VStack {
+                CustomAsyncImage(viewData: viewData.image) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+                .clipped()
+
+                Text(viewData.title)
+                    .font(.title.bold())
+
+                Label(viewData.rating, systemImage: "star.fill")
+
+                HStack {
+                    Label(viewData.year, systemImage: "calendar")
+                    Label(viewData.runtime, systemImage: "clock")
+                    Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
+                }
+                .font(.caption)
+
+                VStack(alignment: .leading) {
+                    Text("Overview")
+                        .font(.headline)
+
+                    Text(viewData.overview)
+                }
+            }
+            .padding(.horizontal, 16)
+        }
     }
 }
 
 #Preview {
-    MovieDetailsView()
+    MovieDetailsView(viewData: .previewValue())
 }
 
 extension MovieViewData {
@@ -29,11 +60,11 @@ extension MovieViewData {
         year: String = "2022",
         runtime: String = "3h 12m",
         overview: String = """
-            Set more than a decade after the events of the first \
-            film, learn the story of the Sully family (Jake, Neytiri, \
-            and their kids), the trouble that follows them, the \
-            lengths they go to keep each other safe, the battles \
-            they fight to stay alive, and the tragedies they endure.
+        Set more than a decade after the events of the first \
+        film, learn the story of the Sully family (Jake, Neytiri, \
+        and their kids), the trouble that follows them, the \
+        lengths they go to keep each other safe, the battles \
+        they fight to stay alive, and the tragedies they endure.
         """,
         genres: [String] = [
             "Action",
