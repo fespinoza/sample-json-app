@@ -1,4 +1,7 @@
 import Foundation
+import Tagged
+
+typealias YoutubeVideoID = Tagged<Movie.Trailer, String>
 
 struct Movie: Decodable, Identifiable {
     let ids: IDContainer
@@ -33,7 +36,7 @@ extension Movie {
 
     struct Trailer: Decodable {
         let name: String
-        let youtube: String
+        let youtube: YoutubeVideoID
         let size: Int
     }
 }

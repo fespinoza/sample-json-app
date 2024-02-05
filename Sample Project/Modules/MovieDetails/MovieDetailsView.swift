@@ -9,6 +9,7 @@ struct MovieViewData {
     let overview: String
     let genres: [String]
     let rating: String
+    let trailer: VideoViewData?
 }
 
 struct MovieDetailsView: View {
@@ -27,7 +28,13 @@ struct MovieDetailsView: View {
                                 .font(.title.bold())
                                 .shadow(radius: colorScheme == .dark ? 4 : 0)
 
-                            Label(viewData.rating, systemImage: "star.fill")
+                            Label(
+                                title: { Text(viewData.rating) },
+                                icon: {
+                                    Image(systemName: "star.fill")
+                                        .foregroundStyle(.yellow)
+                                }
+                            )
 
                             HStack {
                                 Label(viewData.year, systemImage: "calendar")
@@ -49,8 +56,18 @@ struct MovieDetailsView: View {
                     Text(viewData.overview)
                 }
                 .frame(maxWidth: .infinity)
+
+                if let trailer = viewData.trailer {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Trailer")
+                            .font(.headline)
+
+                        ExternalVideoView(videoData: trailer)
+                    }
+                }
             }
             .frame(maxWidth: .infinity)
+            .padding(.bottom, 64)
             .padding(.horizontal, 16)
         }
         .navigationTitle(viewData.title)
@@ -84,7 +101,8 @@ extension MovieViewData {
             "Science Fiction",
             "War"
         ],
-        rating: String = "7.7"
+        rating: String = "7.7",
+        trailer: VideoViewData? = .placeholder(color: .red)
     ) -> Self {
         .init(
             id: id,    
@@ -94,7 +112,8 @@ extension MovieViewData {
             runtime: runtime,    
             overview: overview,    
             genres: genres,    
-            rating: rating   
+            rating: rating,
+            trailer: trailer
         )
     }
 }

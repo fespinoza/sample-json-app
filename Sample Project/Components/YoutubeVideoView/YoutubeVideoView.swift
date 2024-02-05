@@ -4,11 +4,17 @@ import WebKit
 enum VideoViewData {
     case url(remoteUrl: URL)
     case placeholder(color: Color)
+
+    static func youtubeVideo(id: YoutubeVideoID) -> VideoViewData? {
+        guard let baseUrl = URL(string: "https://www.youtube.com/embed/") else { return nil }
+
+        return .url(remoteUrl: baseUrl.appending(path: id.rawValue))
+    }
 }
 
 struct ExternalVideoView: View {
     let videoData: VideoViewData
-    var allowsInlineMediaPlayback: Bool = true
+    var allowsInlineMediaPlayback: Bool = false
 
     var body: some View {
         switch videoData {
@@ -29,7 +35,7 @@ struct ExternalVideoView: View {
 #Preview {
     VStack {
         ExternalVideoView(
-            videoData: .url(remoteUrl: URL(string: "https://www.youtube.com/embed/QhyHBMlZBn8?si=1nW9ElRLwF2eTZD4")!)
+            videoData: .url(remoteUrl: URL(string: "https://www.youtube.com/embed/QhyHBMlZBn8")!)
         )
 
         ExternalVideoView(

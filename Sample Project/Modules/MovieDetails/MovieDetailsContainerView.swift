@@ -50,6 +50,8 @@ struct MovieDetailsContainerView: View {
             runtime = nil
         }
 
+        let trailer: VideoViewData? = movie.trailers?.first.flatMap { .youtubeVideo(id: $0.youtube) }
+
         return .init(
             id: movie.id,
             title: movie.title,
@@ -58,7 +60,8 @@ struct MovieDetailsContainerView: View {
             runtime: runtime,
             overview: movie.overview,
             genres: movie.genres,
-            rating: movie.ratings.simkl.rating.formatted(.number.precision(.significantDigits(2)))
+            rating: movie.ratings.simkl.rating.formatted(.number.precision(.significantDigits(2))),
+            trailer: trailer
         )
     }
 
