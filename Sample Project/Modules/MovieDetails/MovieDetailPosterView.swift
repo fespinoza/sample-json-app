@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MovieDetailPosterView: View {
     let viewData: ImageViewData
+    var gradientColor: Color = Color(uiColor: .systemBackground)
 
     var body: some View {
         CustomAsyncImage(viewData: viewData) { image in
@@ -17,11 +18,24 @@ struct MovieDetailPosterView: View {
         }
         .aspectRatio(340.0 / 510.0, contentMode: .fill)
         .offset(y: 60)
+        .frame(maxWidth: .infinity)
         .frame(height: 450)
         .clipped()
+        .overlay {
+            LinearGradient(
+                stops: [
+                    .init(color: .clear, location: 0.75),
+                    .init(color: gradientColor, location: 1.0),
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        }
     }
 }
 
 #Preview {
-    MovieDetailPosterView(viewData: .image(.avatar2))
+    MovieDetailPosterView(viewData: .loading, gradientColor: .red)
+        .frame(maxHeight: .infinity)
+        .background(Color(uiColor: .secondarySystemBackground))
 }

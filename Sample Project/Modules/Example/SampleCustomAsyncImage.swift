@@ -38,8 +38,6 @@ struct CustomFetchImage {
     }
 }
 
-//https://swiftwithmajid.com/2019/08/21/the-power-of-environment-in-swiftui/
-
 struct CustomFetchImageKey: EnvironmentKey {
     static var defaultValue: CustomFetchImage = .init(fetchImage: CustomFetchImage.basicLoad(url:))
 }
@@ -75,6 +73,7 @@ struct CustomAsyncImage<ImageContent: View>: View {
                 Color.red
             }
         }
+        .transition(.opacity)
         .task { await loadImageIfNeeded() }
     }
 

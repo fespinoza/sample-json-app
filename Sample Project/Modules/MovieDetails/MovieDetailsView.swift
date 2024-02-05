@@ -14,33 +14,28 @@ struct MovieViewData {
 struct MovieDetailsView: View {
     let viewData: MovieViewData
 
+    @Environment(\.colorScheme) private var colorScheme
+
     var body: some View {
         ScrollView {
             VStack(spacing: 32) {
                 MovieDetailPosterView(viewData: viewData.image)
-                    .overlay {
-                        LinearGradient(
-                            stops: [
-                                .init(color: .clear, location: 0.75),
-                                .init(color: Color(uiColor: .systemBackground), location: 1.0),
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    }
                     .padding(.horizontal, -16)
                     .overlay(alignment: .bottom) {
                         VStack(spacing: 8) {
                             Text(viewData.title)
                                 .font(.title.bold())
+                                .shadow(radius: colorScheme == .dark ? 4 : 0)
 
                             Label(viewData.rating, systemImage: "star.fill")
 
                             HStack {
                                 Label(viewData.year, systemImage: "calendar")
+                                
                                 if let runtime = viewData.runtime {
                                     Label(runtime, systemImage: "clock")
                                 }
+                                
                                 Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
                             }
                             .font(.caption)
@@ -53,7 +48,9 @@ struct MovieDetailsView: View {
 
                     Text(viewData.overview)
                 }
+                .frame(maxWidth: .infinity)
             }
+            .frame(maxWidth: .infinity)
             .padding(.horizontal, 16)
         }
         .navigationTitle(viewData.title)
@@ -63,6 +60,7 @@ struct MovieDetailsView: View {
 #Preview {
     NavigationStack {
         MovieDetailsView(viewData: .previewValue())
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 
