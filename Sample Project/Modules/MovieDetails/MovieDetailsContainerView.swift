@@ -36,10 +36,18 @@ struct MovieDetailsContainerView: View {
     }
 
     private func movieViewData(from movie: Movie) -> MovieViewData {
-        let runtime: String? = if let runtime = movie.runtime {
-            runtime.formatted() + " min"
+        let runtime: String?
+
+        if let runtimeValue = movie.runtime {
+            let runtimeInSeconds: TimeInterval = Double(runtimeValue) * 60
+            let formatter = DateComponentsFormatter()
+
+            formatter.unitsStyle = .abbreviated
+            formatter.allowedUnits = [.hour, .minute]
+
+            runtime = formatter.string(from: runtimeInSeconds)
         } else {
-            nil
+            runtime = nil
         }
 
         return .init(
