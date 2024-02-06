@@ -15,6 +15,16 @@ class MovieDetailsViewTests: XCTestCase {
         )
     }
 
+    func testView_iPhone_lightMode_dynamicType() {
+        assertSnapshot(
+            of: viewContainer(),
+            as: .image(
+                on: .iPhone13Pro,
+                traits: UITraitCollection(preferredContentSizeCategory: .accessibilityExtraExtraLarge)
+            )
+        )
+    }
+
     func testView_iPad_lightMode_NB() {
         assertSnapshot(of: viewContainer(locale: "nb"), as: .image(on: .iPadPro11(.portrait)))
     }
