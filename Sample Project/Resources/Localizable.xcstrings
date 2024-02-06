@@ -19,19 +19,54 @@
       }
     },
     "Hello, World!" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hola mundo!"
+          }
+        }
+      }
     },
     "Overview" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descripción"
+          }
+        }
+      }
     },
     "Test Case" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caso de Prueba"
+          }
+        }
+      }
     },
     "Trailer" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trailer"
+          }
+        }
+      }
     },
     "Trending Movies" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Películas Populares"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
