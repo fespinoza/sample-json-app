@@ -1,49 +1,49 @@
 import SwiftUI
 
+struct TrendingMovieViewData: Identifiable {
+    let id: SimklMovieID
+    let image: ImageViewData
+}
+
+extension TrendingMovieViewData {
+    static func previewValue(image: ImageViewData = .image(.avatar2)) -> Self {
+        .init(id: .init((1...200).randomElement() ?? 2), image: image)
+    }
+}
+
 struct TrendingMovieList: View {
-    @State var movies: [TrendingMovie] = []
+    @State var state: BasicLoadingState<[TrendingMovieViewData]> = .idle
     let client = SimklClient()
 
     var body: some View {
-        GeometryReader { proxy in
-            ScrollView {
-                LazyVGrid(
-                    columns: [
-                        GridItem(.adaptive(minimum: 100, maximum: 300)),
-                        GridItem(.adaptive(minimum: 100, maximum: 300)),
-                    ],
-                    spacing: 12,
-                    content: {
-                        ForEach(movies) { movie in
-                            NavigationLink(destination: MovieDetailsContainerView(id: movie.id)) {
-
-                                CustomAsyncImage(viewData: .remote(url: movie.imageURL)) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                }
-                                .frame(
-                                    width: proxy.size.width / 2.0 - 16,
-                                    height: (proxy.size.width / 2.0 - 16) * 1.5
-                                )
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                .shadow(radius: 4)
-                            }
-                        }
-                    }
-                )
-                .padding(.horizontal, 8)
+        Group {
+            switch state {
+            case .idle:
+                Color.clear
+            case .loading:
+                ProgressView()
+            case let .dataLoaded(movies):
+                Content(movies: movies)
+            case let .error(error):
+                Text(error.localizedDescription)
+                    .foregroundStyle(.red)
             }
         }
         .navigationTitle("Trending Movies")
-        .task { await fetchMovies() }
+        .task { await fetchMoviesIfNeeded() }
     }
 
-    func fetchMovies() async {
+    func fetchMoviesIfNeeded() async {
+        guard case .idle = state else { return }
+        state = .loading
+
         do {
-            movies = try await client.trendingMovies()
+            let backendData = try await client.trendingMovies()
+            let movies = backendData.map { TrendingMovieViewData(id: $0.id, image: .remote(url: $0.imageURL)) }
+            state = .dataLoaded(movies)
+
         } catch {
-            print(error)
+            state = .error(error)
         }
     }
 }
