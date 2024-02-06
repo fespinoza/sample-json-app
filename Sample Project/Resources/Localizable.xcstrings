@@ -25,6 +25,12 @@
             "state" : "translated",
             "value" : "Hola mundo!"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hei Verden!"
+          }
         }
       }
     },
@@ -34,6 +40,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Descripción"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oversikt"
           }
         }
       }
@@ -45,6 +57,12 @@
             "state" : "translated",
             "value" : "Caso de Prueba"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøvesak"
+          }
         }
       }
     },
@@ -55,6 +73,12 @@
             "state" : "translated",
             "value" : "Trailer"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filmtrailer"
+          }
         }
       }
     },
@@ -64,6 +88,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Películas Populares"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Populære Filmer"
           }
         }
       }
