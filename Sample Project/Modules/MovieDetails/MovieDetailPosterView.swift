@@ -10,6 +10,7 @@ import SwiftUI
 struct MovieDetailPosterView: View {
     let viewData: ImageViewData
     var gradientColor: Color = Color(uiColor: .systemBackground)
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         CustomAsyncImage(viewData: viewData) { image in
@@ -24,13 +25,17 @@ struct MovieDetailPosterView: View {
         .overlay {
             LinearGradient(
                 stops: [
-                    .init(color: .clear, location: 0.75),
+                    .init(color: .clear, location: gradientStartLocation),
                     .init(color: gradientColor, location: 1.0),
                 ],
                 startPoint: .top,
                 endPoint: .bottom
             )
         }
+    }
+
+    var gradientStartLocation: CGFloat {
+        dynamicTypeSize > .xxLarge ? 0.0 : 0.75
     }
 }
 

@@ -16,6 +16,7 @@ struct MovieDetailsView: View {
     let viewData: MovieViewData
 
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.dynamicTypeSize) private var dynamicSizeType
 
     var body: some View {
         ScrollView {
@@ -36,16 +37,7 @@ struct MovieDetailsView: View {
                                 }
                             )
 
-                            HStack {
-                                Label(viewData.year, systemImage: "calendar")
-                                
-                                if let runtime = viewData.runtime {
-                                    Label(runtime, systemImage: "clock")
-                                }
-                                
-                                Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
-                            }
-                            .font(.caption)
+                            details
                         }
                     }
 
@@ -71,6 +63,29 @@ struct MovieDetailsView: View {
             .padding(.horizontal, 16)
         }
         .navigationTitle(viewData.title)
+    }
+
+    @ViewBuilder var details: some View {
+        if dynamicSizeType > .xxxLarge {
+            VStack(alignment: .leading, spacing: 16) { detailContent }
+                .font(.caption)
+                .frame(maxWidth: .infinity)
+        } else {
+            HStack {
+                detailContent
+            }
+            .font(.caption)
+        }
+    }
+
+    @ViewBuilder var detailContent: some View {
+        Label(viewData.year, systemImage: "calendar")
+
+        if let runtime = viewData.runtime {
+            Label(runtime, systemImage: "clock")
+        }
+
+        Label(viewData.genres.joined(separator: ", "), systemImage: "tag")
     }
 }
 
