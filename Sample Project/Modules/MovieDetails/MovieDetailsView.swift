@@ -47,7 +47,7 @@ struct MovieDetailsView: View {
 
                     Text(viewData.overview)
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: 560)
 
                 if let trailer = viewData.trailer {
                     VStack(alignment: .leading, spacing: 16) {
@@ -56,9 +56,9 @@ struct MovieDetailsView: View {
 
                         ExternalVideoView(videoData: trailer)
                     }
+                    .frame(maxWidth: 560)
                 }
             }
-            .frame(maxWidth: .infinity)
             .padding(.bottom, 64)
             .padding(.horizontal, 16)
         }

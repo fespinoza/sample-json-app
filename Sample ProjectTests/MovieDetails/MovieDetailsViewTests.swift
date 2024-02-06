@@ -15,6 +15,10 @@ class MovieDetailsViewTests: XCTestCase {
         )
     }
 
+    func testView_iPad_lightMode_NB() {
+        assertSnapshot(of: viewContainer(locale: "nb"), as: .image(on: .iPadPro11(.portrait)))
+    }
+
     func testView_fixedSize() {
         assertSnapshot(
             of: viewContainer(),
