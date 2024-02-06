@@ -8,9 +8,9 @@ class MovieDetailsViewTests: XCTestCase {
         assertSnapshot(of: viewContainer(), as: .image(on: .iPhone13Pro))
     }
 
-    func testView_iPhone_darkMode() {
+    func testView_iPhone_darkMode_ES() {
         assertSnapshot(
-            of: viewContainer(),
+            of: viewContainer(locale: "es"),
             as: .image(on: .iPhone13Pro, traits: UITraitCollection(userInterfaceStyle: .dark))
         )
     }
@@ -22,12 +22,18 @@ class MovieDetailsViewTests: XCTestCase {
         )
     }
 
-    private func viewContainer() -> UIViewController {
-        UIHostingController(
-            rootView: NavigationStack {
-                MovieDetailsView(viewData: .previewValue())
-                    .navigationBarTitleDisplayMode(.inline)
-            }
-        )
+    private func viewContainer(locale: String? = nil) -> UIViewController {
+        let view = NavigationStack {
+            MovieDetailsView(viewData: .previewValue())
+                .navigationBarTitleDisplayMode(.inline)
+        }
+
+        return if let locale {
+            UIHostingController(
+                rootView: view.environment(\.locale, .init(identifier: locale))
+            )
+        } else {
+            UIHostingController(rootView: view)
+        }
     }
 }
