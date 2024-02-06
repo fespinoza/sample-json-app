@@ -1,24 +1,21 @@
-//
-//  TrendingMovieList-Content.swift
-//  Sample Project
-//
-//  Created by Felipe Espinoza on 06/02/2024.
-//
-
 import SwiftUI
 
 extension TrendingMovieList {
     struct Content: View {
         let movies: [TrendingMovieViewData]
 
+        var columns: [GridItem] {
+            [
+                GridItem(.flexible(minimum: 100, maximum: 300)),
+                GridItem(.flexible(minimum: 100, maximum: 300)),
+            ]
+        }
+
         var body: some View {
             GeometryReader { proxy in
                 ScrollView {
                     LazyVGrid(
-                        columns: [
-                            GridItem(.adaptive(minimum: 100, maximum: 300)),
-                            GridItem(.adaptive(minimum: 100, maximum: 300)),
-                        ],
+                        columns: columns,
                         spacing: 12,
                         content: {
                             ForEach(movies) { movie in
@@ -29,11 +26,9 @@ extension TrendingMovieList {
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                     }
-                                    .frame(
-                                        width: proxy.size.width / 2.0 - 16,
-                                        height: (proxy.size.width / 2.0 - 16) * 1.5
-                                    )
+                                    .frame(maxWidth: .infinity)
                                     .clipShape(RoundedRectangle(cornerRadius: 8))
+                                    .clipped()
                                     .shadow(radius: 4)
                                 }
                             }

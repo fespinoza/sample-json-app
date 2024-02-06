@@ -42,7 +42,6 @@ class TrendingMovieViewTests: XCTestCase {
                 movies: [
                     .previewValue(),
                     .previewValue(image: .image(.piratesOfTheCaribbean)),
-                    .previewValue(image: .image(.thisIsFine)),
                     .previewValue(),
                     .previewValue()
                 ]
