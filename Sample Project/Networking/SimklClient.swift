@@ -3,8 +3,11 @@ import Foundation
 struct SimklClient {
     func trendingMovies() async throws -> [TrendingMovie] {
         let request = GetTrendingMoviesWeekRequest().urlRequest
+        return try await load(request)
+    }
+    private func load<RequestData: Decodable>(_ request: URLRequest) async throws -> RequestData {
         let urlSession = URLSession(configuration: .default)
         let (data, _) = try await urlSession.data(for: request)
-        return try JSONDecoder().decode([TrendingMovie].self, from: data)
+        return try JSONDecoder().decode(RequestData.self, from: data)
     }
 }
