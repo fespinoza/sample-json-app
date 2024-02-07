@@ -19,15 +19,17 @@ extension TrendingMovieList {
                         spacing: 12,
                         content: {
                             ForEach(movies) { movie in
-                                CustomAsyncImage(viewData: movie.image) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
+                                NavigationLink(destination: MovieDetailsContainerView(id: movie.id)) {
+                                    CustomAsyncImage(viewData: movie.image) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                    }
+                                    .frame(maxWidth: .infinity)
+                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                                    .clipped()
+                                    .shadow(radius: 4)
                                 }
-                                .frame(maxWidth: .infinity)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                                .clipped()
-                                .shadow(radius: 4)
                             }
                         }
                     )
