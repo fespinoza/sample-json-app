@@ -41,7 +41,6 @@ struct SampleCustomAsyncImage: View {
                 Text(ImageTestCase.remote.rawValue).tag(ImageTestCase.remote)
                 Text(ImageTestCase.placeholder.rawValue).tag(ImageTestCase.placeholder)
             }
-
         }
     }
 }

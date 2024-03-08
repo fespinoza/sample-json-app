@@ -604,7 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sample Project/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 2Z7R9FQBNN;
+				DEVELOPMENT_TEAM = 4E6CZX3H5W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sample Project/Resources/Info.plist";
@@ -635,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sample Project/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 2Z7R9FQBNN;
+				DEVELOPMENT_TEAM = 4E6CZX3H5W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sample Project/Resources/Info.plist";
