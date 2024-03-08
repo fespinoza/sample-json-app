@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B0F10502B9B9EDF00FB5C00 /* post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = post_clone.sh; sourceTree = "<group>"; };
+		9B0F10502B9B9EDF00FB5C00 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		9B5C6BD62B6A401F00D3AEE1 /* Secrets_SAMPLE.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets_SAMPLE.xcconfig; sourceTree = "<group>"; };
 		9B5C6BD82B6C1F0600D3AEE1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9B865C702B74227600AD6CFF /* BasicLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLoadingState.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		9B0F104F2B9B9ECD00FB5C00 /* ci_scripts */ = {
 			isa = PBXGroup;
 			children = (
-				9B0F10502B9B9EDF00FB5C00 /* post_clone.sh */,
+				9B0F10502B9B9EDF00FB5C00 /* ci_post_clone.sh */,
 			);
 			path = ci_scripts;
 			sourceTree = "<group>";
