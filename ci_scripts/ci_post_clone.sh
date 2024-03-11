@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo "SIMKL_API_KEY=PLACEHOLDER_XCODE_CLOUD_SECRET" > ../Sample\ Project/Config/Secrets.xcconfig
+echo "SIMKL_API_KEY=PLACEHOLDER_XCODE_CLOUD_SECRET" > ../SampleProject/Config/Secrets.xcconfig
