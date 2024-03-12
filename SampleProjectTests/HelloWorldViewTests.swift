@@ -1,7 +1,7 @@
 import SwiftUI
 import SnapshotTesting
 import XCTest
-@testable import Sample_Project
+@testable import SampleProject
 
 class HelloWorldViewTests: XCTestCase {
     func testView() {
