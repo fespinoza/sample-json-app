@@ -103,6 +103,8 @@ extension XCTestCase {
     ) {
         SnapshotTesting.diffTool = "ksdiff"
 
+        context.debug()
+
         let failure = SnapshotTesting.verifySnapshot(
             of: viewController,
             as: context.imageConfiguration,
@@ -113,6 +115,7 @@ extension XCTestCase {
             testName: context.testName,
             line: context.line
         )
+
         guard let message = failure else { return }
         XCTFail(message, file: context.file, line: context.line)
     }

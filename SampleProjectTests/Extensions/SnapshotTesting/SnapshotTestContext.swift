@@ -54,6 +54,11 @@ struct SnapshotTestContext {
         }
     }
 
+    func debug() {
+        print("============== traits")
+        dump(traits)
+    }
+
     private var appearanceName: String {
         switch appearance {
         case .unspecified:
