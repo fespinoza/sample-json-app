@@ -38,7 +38,6 @@
 		9B7667F02BA1B0F300F415F0 /* XCTestCase-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667EF2BA1B0F300F415F0 /* XCTestCase-Extensions.swift */; };
 		9B7667F22BA1B1B500F415F0 /* TestNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667F12BA1B1B500F415F0 /* TestNamespace.swift */; };
 		9B7667F72BA2369C00F415F0 /* SnapshotDeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667F62BA2369C00F415F0 /* SnapshotDeviceType.swift */; };
-		9B7667F92BA236F600F415F0 /* SnapshotAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667F82BA236F600F415F0 /* SnapshotAppearance.swift */; };
 		9B7667FB2BA2377900F415F0 /* UITraitCollection-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667FA2BA2377900F415F0 /* UITraitCollection-Extensions.swift */; };
 		9B7667FD2BA237C000F415F0 /* SnapshotTestContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667FC2BA237C000F415F0 /* SnapshotTestContext.swift */; };
 		9B7667FF2BA237ED00F415F0 /* ViewImageConfig-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7667FE2BA237ED00F415F0 /* ViewImageConfig-Extensions.swift */; };
@@ -91,7 +90,6 @@
 		9B7667EF2BA1B0F300F415F0 /* XCTestCase-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase-Extensions.swift"; sourceTree = "<group>"; };
 		9B7667F12BA1B1B500F415F0 /* TestNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamespace.swift; sourceTree = "<group>"; };
 		9B7667F62BA2369C00F415F0 /* SnapshotDeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotDeviceType.swift; sourceTree = "<group>"; };
-		9B7667F82BA236F600F415F0 /* SnapshotAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotAppearance.swift; sourceTree = "<group>"; };
 		9B7667FA2BA2377900F415F0 /* UITraitCollection-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITraitCollection-Extensions.swift"; sourceTree = "<group>"; };
 		9B7667FC2BA237C000F415F0 /* SnapshotTestContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestContext.swift; sourceTree = "<group>"; };
 		9B7667FE2BA237ED00F415F0 /* ViewImageConfig-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewImageConfig-Extensions.swift"; sourceTree = "<group>"; };
@@ -330,7 +328,6 @@
 		9B7667F52BA2369000F415F0 /* SnapshotTesting */ = {
 			isa = PBXGroup;
 			children = (
-				9B7667F82BA236F600F415F0 /* SnapshotAppearance.swift */,
 				9B7667F62BA2369C00F415F0 /* SnapshotDeviceType.swift */,
 				9B7667FC2BA237C000F415F0 /* SnapshotTestContext.swift */,
 				9B7667FA2BA2377900F415F0 /* UITraitCollection-Extensions.swift */,
@@ -520,7 +517,6 @@
 				9B3FF3232BA1053E00C87F80 /* TrendingMovieViewTests.swift in Sources */,
 				9B7667FD2BA237C000F415F0 /* SnapshotTestContext.swift in Sources */,
 				9B3FF31D2BA1053E00C87F80 /* MovieDetailsViewTests.swift in Sources */,
-				9B7667F92BA236F600F415F0 /* SnapshotAppearance.swift in Sources */,
 				9B3FF3242BA1053E00C87F80 /* HelloWorldViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
