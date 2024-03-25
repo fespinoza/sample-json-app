@@ -33,6 +33,7 @@ class MovieDetailsViewTests: XCTestCase {
         let view = NavigationStack {
             MovieDetailsView(viewData: .previewValue())
                 .navigationBarTitleDisplayMode(.inline)
+                .lineSpacing(8)
         }
 
         return if let locale {
