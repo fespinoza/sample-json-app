@@ -104,6 +104,8 @@ extension XCTestCase {
         SnapshotTesting.diffTool = "ksdiff"
 
         context.debug()
+        print("---- view controller")
+        dump(viewController.traitCollection)
 
         let failure = SnapshotTesting.verifySnapshot(
             of: viewController,
