@@ -9,4 +9,8 @@ class HelloWorldViewTests: XCTestCase {
         let controller = UIHostingController(rootView: view)
         assertIPhoneSnapshot(of: controller)
     }
+
+    func testTraitsSetup() {
+        
+    }
 }

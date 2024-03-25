@@ -7,7 +7,10 @@ struct TrendingMovieViewData: Identifiable {
 
 extension TrendingMovieViewData {
     static func previewValue(image: ImageViewData = .image(.avatar2)) -> Self {
-        .init(id: .init((1...200).randomElement() ?? 2), image: image)
+        .init(
+            id: .init((1...2_000_000).randomElement() ?? 2),
+            image: image
+        )
     }
 }
 

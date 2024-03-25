@@ -26,8 +26,8 @@ extension XCTestCase {
 
     func assertIPhoneSnapshot(
         of controller: UIViewController,
-        appearance: SnapshotAppearance = .lightMode,
-        extraTraits: UITraitCollection = .init(),
+        appearance: UIUserInterfaceStyle = .light,
+        extraTraits: @escaping ((inout any UIMutableTraits) -> Void) = { _ in },
         file: StaticString = #file,
         testName: String = #function,
         line: UInt = #line
@@ -47,8 +47,8 @@ extension XCTestCase {
 
     func assertIPadSnapshot(
         of controller: UIViewController,
-        appearance: SnapshotAppearance = .lightMode,
-        extraTraits: UITraitCollection = .init(),
+        appearance: UIUserInterfaceStyle = .light,
+        extraTraits: @escaping ((inout any UIMutableTraits) -> Void) = { _ in },
         file: StaticString = #file,
         testName: String = #function,
         line: UInt = #line
@@ -70,8 +70,8 @@ extension XCTestCase {
         of controller: UIViewController,
         width: CGFloat,
         height: CGFloat,
-        appearance: SnapshotAppearance = .lightMode,
-        extraTraits: UITraitCollection = .init(),
+        appearance: UIUserInterfaceStyle = .light,
+        extraTraits: @escaping ((inout any UIMutableTraits) -> Void) = { _ in },
         file: StaticString = #file,
         testName: String = #function,
         line: UInt = #line
