@@ -15,12 +15,16 @@ struct MovieViewData {
 struct MovieDetailsView: View {
     let viewData: MovieViewData
 
+    @Environment(\.self) var env
+
     @Environment(\.colorScheme) private var colorScheme
     @Environment(\.dynamicTypeSize) private var dynamicSizeType
     private let maxReadableWidth: CGFloat = 560
 
     var body: some View {
-        ScrollView {
+        print("====== Environment")
+        dump(env)
+        return ScrollView {
             VStack(spacing: 32) {
                 moviePoster
                     .overlay(alignment: .bottom) { basicInfo }
