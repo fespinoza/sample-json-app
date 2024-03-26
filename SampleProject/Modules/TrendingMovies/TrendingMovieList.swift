@@ -6,8 +6,11 @@ struct TrendingMovieViewData: Identifiable {
 }
 
 extension TrendingMovieViewData {
-    static func previewValue(image: ImageViewData = .image(.avatar2)) -> Self {
-        .init(id: .init((1...200).randomElement() ?? 2), image: image)
+    static func previewValue(
+        id: SimklMovieID = .init((1...2_000_000).randomElement() ?? 2),
+        image: ImageViewData = .image(.avatar2)
+    ) -> Self {
+        .init(id: id, image: image)
     }
 }
 
