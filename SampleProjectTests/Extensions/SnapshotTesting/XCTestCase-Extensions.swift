@@ -11,7 +11,7 @@ extension XCTestCase {
 
     /// the base url where the snapshots will be found
     static var snapshotsTestBaseUrl: URL {
-        testBundleUrl
+        isRunningOnCI ? testBundleUrl : TestNamespace.sourceCodeTestDirectory()
     }
 
     /// Returns the URL where the bundle is present
@@ -108,6 +108,7 @@ extension XCTestCase {
             as: context.imageConfiguration,
             named: context.fileName,
             record: isRecording,
+            snapshotDirectory: context.snapshotDirectory,
             file: context.file,
             testName: context.testName,
             line: context.line
