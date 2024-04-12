@@ -1,0 +1,26 @@
+{
+  "configurations" : [
+    {
+      "id" : "F0651710-4A44-483E-967C-869DABA15756",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en",
+    "region" : "NO",
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SampleProject.xcodeproj",
+        "identifier" : "9BD958862B66E0380073C8E7",
+        "name" : "SampleProjectTests"
+      }
+    }
+  ],
+  "version" : 1
+}

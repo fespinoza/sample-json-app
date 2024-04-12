@@ -5,35 +5,28 @@ import XCTest
 
 class TrendingMovieViewTests: XCTestCase {
     func testView_iPhone_lightMode() {
-        assertSnapshot(of: viewContainer(), as: .image(on: .iPhone13Pro))
+        assertIPhoneSnapshot(of: viewContainer())
     }
 
     func testView_iPhone_darkMode_ES() {
-        assertSnapshot(
-            of: viewContainer(locale: "es"),
-            as: .image(on: .iPhone13Pro, traits: UITraitCollection(userInterfaceStyle: .dark))
-        )
+        assertIPhoneSnapshot(of: viewContainer(locale: "es"), appearance: .dark)
     }
 
     func testView_iPhone_lightMode_dynamicType() {
-        assertSnapshot(
+        assertIPhoneSnapshot(
             of: viewContainer(),
-            as: .image(
-                on: .iPhone13Pro,
-                traits: UITraitCollection(preferredContentSizeCategory: .accessibilityExtraExtraLarge)
-            )
+            extraTraits: { mutableTraits in
+                mutableTraits.preferredContentSizeCategory = .accessibilityExtraExtraLarge
+            }
         )
     }
 
     func testView_iPad_lightMode_NB() {
-        assertSnapshot(of: viewContainer(locale: "nb"), as: .image(on: .iPadPro11(.portrait)))
+        assertIPadSnapshot(of: viewContainer(locale: "nb"))
     }
 
     func testView_fixedSize() {
-        assertSnapshot(
-            of: viewContainer(),
-            as: .image(on: .iPhone13Pro, size: CGSize(width: 393, height: 1200))
-        )
+        assertFixedSizeSnapshot(of: viewContainer(), width: 393, height: 1200)
     }
 
     private func viewContainer(locale: String? = nil) -> UIViewController {
