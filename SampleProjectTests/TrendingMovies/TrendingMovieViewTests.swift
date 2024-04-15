@@ -40,10 +40,10 @@ class TrendingMovieViewTests: XCTestCase {
         let view = NavigationStack {
             TrendingMovieList.Content(
                 movies: [
-                    .previewValue(),
-                    .previewValue(image: .image(.piratesOfTheCaribbean)),
-                    .previewValue(),
-                    .previewValue()
+                    .previewValue(id: 1),
+                    .previewValue(id: 2, image: .image(.piratesOfTheCaribbean)),
+                    .previewValue(id: 3),
+                    .previewValue(id: 4)
                 ]
             )
             .navigationTitle("Trending Movies")
