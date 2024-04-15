@@ -50,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B022E1A2BCDC8B7006E4936 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		9B022E1C2BCDC8C8006E4936 /* Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tests.xctestplan; sourceTree = "<group>"; };
 		9B3FF30A2BA1053E00C87F80 /* MovieDetailsViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewTests.swift; sourceTree = "<group>"; };
 		9B3FF3132BA1053E00C87F80 /* TrendingMovieViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingMovieViewTests.swift; sourceTree = "<group>"; };
 		9B3FF3152BA1053E00C87F80 /* HelloWorldViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldViewTests.swift; sourceTree = "<group>"; };
@@ -104,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B022E1B2BCDC8B7006E4936 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				9B022E1A2BCDC8B7006E4936 /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		9B022E1D2BCDC8C8006E4936 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				9B022E1C2BCDC8C8006E4936 /* Tests.xctestplan */,
+			);
+			path = TestPlans;
+			sourceTree = "<group>";
+		};
 		9B3FF30B2BA1053E00C87F80 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,9 +321,11 @@
 			isa = PBXGroup;
 			children = (
 				9B5C6BD82B6C1F0600D3AEE1 /* README.md */,
+				9B022E1B2BCDC8B7006E4936 /* ci_scripts */,
 				9BBB7CC02B653E4800393882 /* Products */,
 				9B3FF3502BA1054A00C87F80 /* SampleProject */,
 				9B3FF3162BA1053E00C87F80 /* SampleProjectTests */,
+				9B022E1D2BCDC8C8006E4936 /* TestPlans */,
 			);
 			sourceTree = "<group>";
 		};
