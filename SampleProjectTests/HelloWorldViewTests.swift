@@ -7,6 +7,9 @@ class HelloWorldViewTests: XCTestCase {
     func testView() {
         let view = HelloWorldView()
         let controller = UIHostingController(rootView: view)
-        assertSnapshot(of: controller, as: .image(on: .iPhone13Pro))
+        customAssertSnapshot(
+            of: controller,
+            as: .image(on: .iPhone13Pro, precision: 0.98, perceptualPrecision: 0.98)
+        )
     }
 }

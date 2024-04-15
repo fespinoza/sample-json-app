@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1B2E392BCDCA6600FD380B /* SnapshotTesting-CI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B2E382BCDCA6600FD380B /* SnapshotTesting-CI.swift */; };
+		9B1B2E3B2BCDCB5C00FD380B /* TestNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B2E3A2BCDCB5C00FD380B /* TestNamespace.swift */; };
+		9B1B2E572BCDCD1200FD380B /* __Snapshots__ in Resources */ = {isa = PBXBuildFile; fileRef = 9B1B2E562BCDCD1200FD380B /* __Snapshots__ */; };
 		9B3FF31D2BA1053E00C87F80 /* MovieDetailsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FF30A2BA1053E00C87F80 /* MovieDetailsViewTests.swift */; };
 		9B3FF3232BA1053E00C87F80 /* TrendingMovieViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FF3132BA1053E00C87F80 /* TrendingMovieViewTests.swift */; };
 		9B3FF3242BA1053E00C87F80 /* HelloWorldViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FF3152BA1053E00C87F80 /* HelloWorldViewTests.swift */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		9B022E1A2BCDC8B7006E4936 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		9B022E1C2BCDC8C8006E4936 /* Tests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tests.xctestplan; sourceTree = "<group>"; };
+		9B1B2E382BCDCA6600FD380B /* SnapshotTesting-CI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapshotTesting-CI.swift"; sourceTree = "<group>"; };
+		9B1B2E3A2BCDCB5C00FD380B /* TestNamespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNamespace.swift; sourceTree = "<group>"; };
+		9B1B2E562BCDCD1200FD380B /* __Snapshots__ */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __Snapshots__; sourceTree = "<group>"; };
 		9B3FF30A2BA1053E00C87F80 /* MovieDetailsViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewTests.swift; sourceTree = "<group>"; };
 		9B3FF3132BA1053E00C87F80 /* TrendingMovieViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingMovieViewTests.swift; sourceTree = "<group>"; };
 		9B3FF3152BA1053E00C87F80 /* HelloWorldViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloWorldViewTests.swift; sourceTree = "<group>"; };
@@ -122,6 +128,22 @@
 			path = TestPlans;
 			sourceTree = "<group>";
 		};
+		9B1B2E362BCDCA4F00FD380B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B1B2E372BCDCA5500FD380B /* SnapshotTesting */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B1B2E372BCDCA5500FD380B /* SnapshotTesting */ = {
+			isa = PBXGroup;
+			children = (
+				9B1B2E382BCDCA6600FD380B /* SnapshotTesting-CI.swift */,
+			);
+			path = SnapshotTesting;
+			sourceTree = "<group>";
+		};
 		9B3FF30B2BA1053E00C87F80 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +163,12 @@
 		9B3FF3162BA1053E00C87F80 /* SampleProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B1B2E562BCDCD1200FD380B /* __Snapshots__ */,
+				9B3FF3152BA1053E00C87F80 /* HelloWorldViewTests.swift */,
+				9B1B2E3A2BCDCB5C00FD380B /* TestNamespace.swift */,
+				9B1B2E362BCDCA4F00FD380B /* Extensions */,
 				9B3FF30B2BA1053E00C87F80 /* MovieDetails */,
 				9B3FF3142BA1053E00C87F80 /* TrendingMovies */,
-				9B3FF3152BA1053E00C87F80 /* HelloWorldViewTests.swift */,
 			);
 			path = SampleProjectTests;
 			sourceTree = "<group>";
@@ -444,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1B2E572BCDCD1200FD380B /* __Snapshots__ in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,8 +507,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1B2E3B2BCDCB5C00FD380B /* TestNamespace.swift in Sources */,
 				9B3FF3232BA1053E00C87F80 /* TrendingMovieViewTests.swift in Sources */,
 				9B3FF31D2BA1053E00C87F80 /* MovieDetailsViewTests.swift in Sources */,
+				9B1B2E392BCDCA6600FD380B /* SnapshotTesting-CI.swift in Sources */,
 				9B3FF3242BA1053E00C87F80 /* HelloWorldViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
