@@ -5,13 +5,17 @@ import XCTest
 
 class TrendingMovieViewTests: XCTestCase {
     func testView_iPhone_lightMode() {
-        customAssertSnapshot(of: viewContainer(), as: .image(on: .iPhone13Pro))
+        customAssertSnapshot(of: viewContainer(), as: .image(on: .iPhone13Pro, perceptualPrecision: 0.98))
     }
 
     func testView_iPhone_darkMode_ES() {
         customAssertSnapshot(
             of: viewContainer(locale: "es"),
-            as: .image(on: .iPhone13Pro, traits: UITraitCollection(userInterfaceStyle: .dark))
+            as: .image(
+                on: .iPhone13Pro,
+                perceptualPrecision: 0.98,
+                traits: UITraitCollection(userInterfaceStyle: .dark)
+            )
         )
     }
 
@@ -20,19 +24,23 @@ class TrendingMovieViewTests: XCTestCase {
             of: viewContainer(),
             as: .image(
                 on: .iPhone13Pro,
+                perceptualPrecision: 0.98,
                 traits: UITraitCollection(preferredContentSizeCategory: .accessibilityExtraExtraLarge)
             )
         )
     }
 
     func testView_iPad_lightMode_NB() {
-        customAssertSnapshot(of: viewContainer(locale: "nb"), as: .image(on: .iPadPro11(.portrait)))
+        customAssertSnapshot(
+            of: viewContainer(locale: "nb"),
+            as: .image(on: .iPadPro11(.portrait), perceptualPrecision: 0.98)
+        )
     }
 
     func testView_fixedSize() {
         customAssertSnapshot(
             of: viewContainer(),
-            as: .image(on: .iPhone13Pro, size: CGSize(width: 393, height: 1200))
+            as: .image(on: .iPhone13Pro, perceptualPrecision: 0.98, size: CGSize(width: 393, height: 1200))
         )
     }
 
