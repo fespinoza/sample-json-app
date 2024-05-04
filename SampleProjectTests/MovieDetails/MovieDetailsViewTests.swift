@@ -4,6 +4,10 @@ import XCTest
 @testable import SampleProject
 
 class MovieDetailsViewTests: XCTestCase {
+    override func setUp() {
+        SnapshotTesting.diffTool = "ksdiff"
+    }
+
     func testView_iPhone_lightMode() {
         assertSnapshot(of: viewContainer(), as: .image(on: .iPhone13Pro))
     }
