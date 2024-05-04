@@ -40,7 +40,6 @@ extension XCTestCase {
             as: snapshotting,
             named: name,
             record: recording,
-//            snapshotDirectory: String?,
             snapshotDirectory: snapshotDirectory,
             timeout: timeout,
             file: file,
