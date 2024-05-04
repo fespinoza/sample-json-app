@@ -9,7 +9,7 @@ class MovieDetailsViewTests: XCTestCase {
     }
 
     func testView_iPhone_lightMode() {
-        assertSnapshot(
+        customAssertSnapshot(
             of: viewContainer(),
             as: .image(
                 on: .iPhone13Pro,
@@ -19,14 +19,14 @@ class MovieDetailsViewTests: XCTestCase {
     }
 
     func testView_iPhone_darkMode_ES() {
-        assertSnapshot(
+        customAssertSnapshot(
             of: viewContainer(locale: "es"),
             as: .image(on: .iPhone13Pro, traits: UITraitCollection(userInterfaceStyle: .dark))
         )
     }
 
     func testView_iPhone_lightMode_dynamicType() {
-        assertSnapshot(
+        customAssertSnapshot(
             of: viewContainer(),
             as: .image(
                 on: .iPhone13Pro,
@@ -36,11 +36,11 @@ class MovieDetailsViewTests: XCTestCase {
     }
 
     func testView_iPad_lightMode_NB() {
-        assertSnapshot(of: viewContainer(locale: "nb"), as: .image(on: .iPadPro11(.portrait)))
+        customAssertSnapshot(of: viewContainer(locale: "nb"), as: .image(on: .iPadPro11(.portrait)))
     }
 
     func testView_fixedSize() {
-        assertSnapshot(
+        customAssertSnapshot(
             of: viewContainer(),
             as: .image(on: .iPhone13Pro, size: CGSize(width: 393, height: 1200))
         )
