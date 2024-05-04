@@ -11,8 +11,10 @@ class MovieDetailsViewTests: XCTestCase {
     func testView_iPhone_lightMode() {
         assertSnapshot(
             of: viewContainer(),
-            as: .image(on: .iPhone13Pro,
-            traits: UITraitCollection(userInterfaceStyle: .light))
+            as: .image(
+                on: .iPhone13Pro,
+                traits: UITraitCollection(userInterfaceStyle: .light)
+            )
         )
     }
 
